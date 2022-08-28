@@ -2,88 +2,250 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>虾皮运营</title>
+    <title>Selenimu爬虫</title>
     <link rel="stylesheet" href="css/style.css">
-<!--    <embed src="sr/audio/生死相随.mp3" hidden="hidden" loop auto/>-->
 </head>
 <body>
 <div>
-    <h1>1.做虾皮为什么要重视选品？</h1>
-    <h3>
-        选品好不好直接決定了你的成败，选品差运营强硬推顺势会很轻松但是逆势会很吃力。
-        好的产品自带流量和订单：
-        一款好的產品上架後會被系統推薦拿到系統推薦的免費流量
-        選到一款好的產品，只要做基礎推廣，就能出單賺錢
-        一款好的產品是很容易被打造成爆款的
-        1款好產品的作用遠遠大於100個劣質產品。
-    </h3>
-    <h1>2.什么样的产品是好产品？</h1>
-    <h3>
-        1.好產品是熱銷產品：比如搜索襪子 按照最熱銷排序 出現都是熱銷產品 這些都是不錯的產品
-        我們能不能直接跟賣這些產品呢？
-        2.如果你有貨源、價格優勢，那麼可以跟款賣，價格低10%以上，產品優化的更好
-        3.如果你沒有貨源、沒有價格優勢，那麼就不可以跟賣
-        4.熱銷產品不能跟賣怎麼辦？
-        參照爆款屬性去做極速選品法
-        好的產品==藍海產品
-        藍海產品：供不應求的商品
-        shopee藍海產品：搜尋量大，但供給量小的產品
-        藍海產品頁面數：64頁以下
-        問題：流量入口少
-        對於新店鋪起步最快的方式
-    </h3>
-    <h1>3.一件代发做什么容易赚钱？</h1>
-    <h3>
-        家居类目：
-        台湾偏向收纳和餐厨
-        马来站点偏向装饰
-    </h3>
-    <h1>4.自己有货源如何布局？</h1>
-    <h3></h3>
-    <h1>5.选品从哪里选？</h1>
-    <h3>
-        常用的货源网站？阿里巴巴 淘宝 拼多多 17做网店 义乌购 织里童装。各货源渠道对比：淘宝-【优势：产品图相对好】-【劣势：价格较高】；拼多多-
-        【优势：一件代发无运费】-【劣势：相对批发价格略高】；1688-【优势：批发价格低】-【劣势：有起批量运费较高】；其他批发网站-【优势：批发价格低 适合大量批发】
-        -【劣势：有起批量限制】
-    </h3>
-    <h1>6.为什么要做产品矩阵？</h1>
-    <h3>
-        虾皮不是一个做大爆款的平台,要做多爆款的产品矩阵。引流款：店铺流量的主要来源平台，活动/广告 cp值高的；普通款：引流款的同类或相似产品，在引流款旁边通过加购，
-        多件折扣之类，有一些升级或者不同；利润款：产品卖点比较突出，竞争小的产品；暴利款：独有产品、热门事件周边产品等。 前面要做好风格区分 超级风格店铺分类
-    </h3>
-    <h1>7.如何做产品矩阵？</h1>
-    <h3>
-        四款产品如何布局？利润率如何设置？引流款-【产品占比：30%】-【利润率：10%-20%】；普通款-【产品占比：40%】-【利润率：20%-30%】；利润款
-        -【产品占比：20%】-【利润率：30%-50%】；暴利款-【产品占比：10%】-【利润率：50%】
-    </h3>
-    <h1>8.什么样的产品可以做引流款？</h1>
-    <h3>
-        哪些产品可以做引流款？
-        分析最热销，利用爆款属性选品法选出的产品，相对于最热销的产品一定要多至少一个客户关心的卖点
+    <h1>第01节 Selenium</h1>
+    <h3>1.Selenium概述</h3>
+    <h4>Selenium是一个web自动化测试工具，最初是为网站自动化测试而开发的，Selenium可以直接运行在浏览器上，它支持所有主流浏览器。因为Selenium可以控制浏览器发送请求，并获取网页数据，因此可以应用于爬虫领域
+        Selenium可以根据我们的指令，让浏览器自动加载页面，获取需要的数据，甚至页面截屏，或者判断网站上某些的动作是否发生。selenium自己不带浏览器，不支持浏览器的功能，它需要与第三方浏览器结合在一起才能使用。
+        官方文档：https://selenium-python.readthedocs.io/index.html
+    </h4>
 
-        利用极速蓝海选品法选出的产品基本都可以作为引流款
-        要求：核心关键词搜索量大于5000的产品
+    <h3>2.浏览器驱动</h3>
+    <h4>浏览器驱动用于使用Selenium操控本地浏览器执行自动化操作。驱动网站：https://npmmirror.com/
+        接着要去到谷歌浏览器查看谷歌浏览器的版本，路径：右上角 帮助--关于Chrome Google,然后找最相近的版本驱动 版本 104.0.5112.102（正式版本） （64 位）
+    </h4>
 
-        tips: 如果利用跟款选品，没有明显价格优势，不要作为引流款。
-    </h3>
-    <h1>9.极速蓝海选品法</h1>
-    <h3>
-        简单：只要把广告词中的属性抓取出来，就会形成一个产品的具体形象在脑中非常容易选出产品
-        直接词给到我们，我们就知道这个产品是什么样的，我们只要找到贴合的产品，在价格段内就能获得流量和快速出单。
+    <h3>3.基本使用</h3>
+    <h4>01.调用Chrome驱动，控制浏览器打开网页👇</h4>
+    <h4>#1. 导入webdriver <br>
+        👉from selenium import webdriver <BR>
+        👉from selenium.webdriver.common.by import By <br>
+        #2. 调用键盘按键操作时需要引入的keys值
+        👉from selenium.webdriver.common.keys import keys<br>
+        #3. 创建浏览器对象 <br>
+        如果chromedriver.exe已经添加到windows环境变量，则通过from selenium.webdriver import Chrome，driver=chrome()来创建对象 <br>
+        如果没有加入windows环境变量，则通过driver=webdriver.chrome("驱动路径")创建浏览器对象 <br>
+        #4. get方法会一直等待页面被完全加载，然后才开始继续程序，通常测试会在这里选择 time.sleep(2) <br>
+        👉driver.get("http://www.baidu.com")
+    </h4>
+    <h4>02.控制页面元素👇</h4>
+    <h4>#id="kw"是百度搜素输入框，输入字符串"长城"<br>
+        👉driver.find_element(By.CSS_SELECTOR,"#kw").send_keys("长城") <br>
+        #id="su"是百度搜索输入按键，click()是模拟点击
+        👉driver.find_element(By.CSS_SELECTOR, "#su").click() <br>
+        #关闭浏览器 <br>
+        👉driver.quit()
+    </h4>
 
-        蓝海：快速抓到热卖产品，高需求产品的蓝海属性-低竞争好出单
+    <h1>第02节 Selenium常用操作</h1>
+    <h3>1.元素定位</h3>
+    <h4>#获取单个元素 <br>
+        👉driver.find_element(By.ID,"inputOriginal")<br>
+        👉driver.find_element(By.CSS_SELECTOR,"#inputOriginal") 根据选择器 <br>
+        👉driver.find_element(By.TAG_NAME,"div") 根据标签名字<br>
+        👉driver.find_element(By.NAME,"username")<br>
+        👉driver.find_element(By.LINK_TEXT,"下一页") 根据超链接的文本去取<br>
+        🐛：如果找不到元素会报错：xxx...Unable to locate element xx. <br>
+        <hr>
+        # 获取多个元素，返回的是列表[1,2,3...]如果都没有找到，则返回空列表 <br>
+        👉driver.find_elements(By.ID,"inputOriginal")<br>
+        👉driver.find_elements(By.CSS_SELECTOR,"#inputOriginal")<br>
+        👉driver.find_elements(By.TAG_NAME,"div")<br>
+        👉driver.find_elements(By.NAME,"username")<br>
+        👉driver.find_elements(By.LINK_TEXT,"下一页")<br>
+    </h4>
 
-        不用上特别多产品就能轻松出单的利器
+    <h3>2.内容获取: 浏览器返回的内容.👇</h3>
+    <h4>👉01.size 返回元素大小 <br>
+         👉02.text 返回元素的文本 <br>
+         👉03.title 获取页面的title <br>
+         👉04.current_url 获取当前页面url<br>
+         👉05.get_attribute()获取属性值 <a href="xxxx">百度</a> <br>
+    </h4>
+    <h4>coding演示：<br>
+        driver = webdriver.Chrome("./Chromedriver.exe") <br>
+        # 加载有道翻译页面 <br>
+        driver.get("https://fanyi.youdao.com") <br>
+        # 打印标题和目前的url <br>
+        print(driver.title) <br>
+        print(driver.current_url) <br>
+        # 获取输入框 <br>
+        transMachine = driver.find_element(By.ID,"transMachine") <br>
+        <hr>
+        print(transMachine.size)<br>
+        print(transMachine.text)<br>
+        print(transMachine.get_attribute("href"))<br>
+        print(transMachine.is_displayed()) 判断某个按钮是否可见 是否被浏览器渲染出来<br>
+        print(transMachine.is_enabled())<br>
+    </h4>
 
-        前提条件1：店铺需要通过这种方法迅速选出100+产品上架（要有基数）
-        100-200少
+    <h3>3.窗口操作</h3>
+    <h4>#01.maximize_window() 最大化-->模拟浏览器最大化按钮 <br>
+        #02.set_window_size(100,100) 浏览器大小 -->设置浏览器宽、高（像素）<br>
+        #03.set_window_position(300,200) 浏览器位置 -->设置浏览器位置<br>
+        #04.back() 后退--> 模拟浏览器后退按钮<br>
+        #05.forward() 前进-->模拟浏览器前进按钮<br>
+        #06.refresh() 刷新 --> 模拟浏览器FS刷新<br>
+        #07.close() 关闭-->模拟浏览器关闭按钮（关闭单个窗口）<br>
+        #08.quit() 关闭--> 关闭所有的webdriver启动的窗口<br>
+    </h4>
 
-        前提条件2：风格店铺-优质的店铺结构
-        跳失率和店铺结构有关
-    </h3>
+    <h3>4.元素等待</h3>
+    <h4>#01.翻页获取每页元素 <br>
+        <hr>
+        coding演示：<br>
+        from selenium import webdriver <br>
+        from selenium.webdriver.common.by import By <br>
+        from selenium.webdriver.common.Keys import Keys <br><br>
+        driver = webdriver.Chrome("./Chromedriver.exe") <br>
+        # 隐式等待，全局作用 <br>
+        driver.implicitly_wait(30)
+        driver.get("https://www.dangdangwang.com/") <br>
+        key = driver.find_element(By.ID,"key_s") <br>
+        key.send_keys("科幻") <br>
+        # 获取搜索框，点击搜索 <br>
+        search = driver.find_element(By.CSS_SELECTOR, "#form_search_new .button") <br>
+        search.click() <br>
+        # 获取商品标题及价格 <br>
+        for i in range(5):<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;shoplist = driver.find_element(By.CSS_SELECTOR, ".shoplist li") <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;for li in shoplist: <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(li.find_element(By.CSS_SELECTOR, "a").get_attribute(title) <br>
+            # 获取下一页按钮 <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;next = driver.find_element(By.LINK_TEXT, "下一页") <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;next.click()
+    </h4>
+    <h4>#02.等待时间 <br>
+        现在的网页越来越多采用了Ajax技术，这样程序便不能确定何时某个元素完全加载出来了。如果实际页面等待时间过长导致页面元素还没出来，但是你的代码直接使用了这个WebElement，
+        那么就会抛出NullPointer异常。为了避免这种元素定位困难而且会提高产生ElemenNotVisibleException的概率。所以Selenium提供了两种等待方式，一种是隐式等待，
+        一种是显式等待。隐式等待是等待特定的时间，显式等待是指定某一条件直到这个条件成立继续执行。<br>
+        <hr>
+        <strong>显式等待</strong> <br>
+        等待指定某个条件，然后设置最长等待时间。如果在这个时间还没有找到元素，那么便会抛出异常了。显示等待使用WebDriverWait完成 <br>
+        WebDriverWait(driver, timeout, poll_frequency=Poll_FREQUENCY, ignored_exceptions=None) <br>
+        👉driver所创建的浏览器driver <br>
+        👉timeout最长时间长度（默认单位：秒）<br>
+        👉poll_frequency间隔检测时长（每）默认0.5秒 <br>
+        👉ignored_exceptions方法调用中忽略的异常，默认只抛出：找不到元素的异常 <br>
+        🤞基本格式：(webDriverWait+until+(判断条件)) <br>
+        until --> 直到调用的方法返回为True, until(method, message='') method:excepted_conditions库中定义的方法
+        message:自定义报错信息<br>
+        <hr>
+        #判断条件 <br>
+        判断当前页面标题是否为title, title_is(title) <br>
+        判断当前页面标题是否为title, title_contains(title) <br>
+        判断此定位的元素是否可见，presence_of_element_located(locator) <br>
+        判断页面网址中是否包含url,url_contain(url) <br>
+        判断此定位的元素是否可见 visibility_of_element 所获得的元素 <br>
+        判断此定位的一组元素是否至少存在一个presence_of_all_elements_located(locator) <br>
+        判断此定位的一组元素是否至少存在一个可见，visibility_of_any_elements_located(locator) <br>
+        判断此定位的一组元素全部可见 visibility_of_all_elements_located(locator) <br>
+        判断此定位中是否包含 text_的内容，text_to_be_present_in_element(locator, text_) <br>
+        locator:元素的定位信息 <br>
+        text_ : 期望的文本信息 <br>
+        </h4>
+        <h4># from selenium.webdriver.support.ui import webDriverWait <br>
+            # from selenium.webdriver.support import expected_conditions as EC <br>
+            # 程序每0.5秒检查，是否满足，标题包含“百度一下”这个条件，检查是否满足条件的最长时间为：15秒，超过15秒仍未满足则抛出异常 <br>
+            webDriverWait(driver,15,0.5).until(EC.title_contains("百度一下")) <br>
+            # 程序每0.5秒检查，是否满足，某定位的元素出现，检查是否满足条件的最长时间为15秒，超过15秒仍未满足条件则抛出异常 <br>
+            WebDriverWait(driver, 15, 0.5).until(EC.visibility_of_element_located(By.CSS_SELECTOR, "xx"))
+
+        </h4>
+
+        <strong>隐式等待</strong> <br>
+        隐式等待比较简单，就是设置全局元素查找的超时时间 <br>
+        implicitly_wait(time_to_wait) <br>
+        设置的时间单位为秒，例如implicitly_wait(30),意思是超过30秒没有定位到一个元素，程序就会报错抛出异常，期间会一直轮询问查找定位元素。<br>
+
+        <h1>第03节 selenium页面操作（动作链）</h1>
+        <h3>1.鼠标操作</h3>
+        <h4>#01.context_click() 右击 --> 此方法模拟鼠标右键点击效果 <br>
+            #02.double_click()  双击 --> 此方法模拟鼠标双击效果 <br>
+            #03.drag_and_drop() 拖动 --> 此方法模拟鼠标拖动效果 <br>
+            #04.move_to_element() 悬停 --> 此方法模拟鼠标悬停效果 <br>
+            #05.perform() 执行 --> 此方法用来执行以上所有鼠标方法 <br>
+            👇👇👇👇👇👇👇👇👇👇👇👇👇 <br>
+            driver.get("https://www.baidu.com/") <br>
+            more = driver.find_element(By.LINK_TEXT, "更多") <br>
+            # 将鼠标移动到更多按钮 <br>
+            ActionChains(driver).move_to_element(more).perform()
+        </h4>
+        <h3>2.键盘操作</h3>
+        <h4>#01.send_keys(keys.BACK_SPACE) 删除键（BackSpace）<br>
+            #02.send_keys(keys.SPACE) 空格键（space）<br>
+            #03.send_keys(keys.TAB)制表键（Tab）<br>
+            #04.send_keys(keys.ESCAPE) 回退键（ESC）<br>
+            #05.send_keys(keys.ENTER) 回车键（Enter）<br>
+            #06.send_keys(keys.CONTROL,"a") 全选（Ctrl+A）<br>
+            #07.send_keys(keys.CONTROL,"c") 复制（Ctrl+C） <br>
+            <hr>
+            from selenium.webdriver.common.keys import keys <br>
+            driver.get("https://www.baidu.com") <br>
+            element = driver.find_element(By.ID,"kw") <br>
+            # 输入用户名 <br>
+            element.send_keys("admin1") <br>
+            # 删除1 <br>
+            element.send_keys(keys.BACK_SPACE) <br>
+            # 全选 <br>
+            element.send_keys(keys.CONTROL, "a") <br>
+            # 复制 <br>
+            element.send_keys(keys.CONTROL, "c") <br>
+            # 粘贴 <br>
+            element.send_keys(keys.CONTROL,"v") <br>
+        </h4>
+        <h3>3.滚动条</h3>
+        <h4>#在HTML页面中，由于前端技术框架的原因，页面元素为动态显示，元素根据滚动条的下拉而被加载 <br>
+            #01.设置JavaScript脚本控制滚动条，（0：左边距：1000；上边距：单位像素）<br>
+                js = "window.scrollTo(0,1000)"
+            #02.webDriver调用js脚本方法 <br>
+            driver.execute_script(js) <br>
+        </h4>
+        <h3>4.窗口截图</h3>
+        <h4>#自动化脚本是由程序去执行的，因此有时候打印的错误信息并不是十分明确。如果在执行出错的时候对当前窗口截图保存，那么通过图片就可以非常直观地看到出错的原因。<br>
+            # 截取当前窗口 <br>
+            driver.get_screenshot_as_file("./demo.png") <br>
+        </h4>
+
+        <h1>第05节 数据存储</h1>
+        <h3>01.将数据写入CSV文件</h3>
+        <h4>#读写csv文件 <br>
+            import csv <br>
+            #以写入方式打开文件，如果文件不存在则自动创建 <br>
+            f = open("d:/test.csv",'w') <br>
+            # 获取csv writer,用于写入csv格式数据 <br>
+            writer = csv.writer(f) <br>
+            # 写入数据 <br>
+            writer.writerow(["张三","男","1.7"]) <br>
+            # 关闭文件 <br>
+            f.close() <br>
+        </h4>
+
+        <h3>02.将数据写入至MySQL</h3>
+        <h4># 1.安装模块 <br>
+            pip install pymysql <br>
+            # 2.导入模块 <br>
+            import pymysql <br>
+            # 3.创建连接 <br>
+            conn = pymysql.connect(host="127.0.0.1",port=3306,user="root",passwd="",db="tkq1",charset="utf-8")<br>
+            # 4.创建游标 <br>
+            cursor = conn.cursor()<br>
+            # 5.执行SQL,并返回收受影响行数 <br>
+            effect_row = cursor.execute("select * from tb7") <br>
+            # 6.执行SQL,返回受影响行数，执行多次
+            #effect_row = cursor.executemany("insert into tb7(user,pass,license)values(%s,%s,%s)"),[("ul","ulpass
+            ,"11111"),("u2","u2pass","22222")])
+            # 提交，不然无法保存新建或者修改的数据 <br>
+            conn.commit() <br>
+            # 关闭游标 <br>
+            cursor.close() <br>
+            # 关闭连接 <br>
+            conn.close()<br>
+        </h4>
 </div>
 </body>
 </html>
-
-
-
